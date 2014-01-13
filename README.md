@@ -1,5 +1,5 @@
 #ol.wsserver v-0.1
-##Embedded websocket/http webserver external for Cycling74's Max
+##HTML5 websocket/http webserver external for Cycling74's Max
 control max patches from multiple web browsers
 
 based on [Civetweb](http://sourceforge.net/projects/civetweb/)
@@ -18,7 +18,7 @@ Example uses interface.js by [Charlie Roberts](http://www.charlie-roberts.com/in
 
 ###Building from source
 
-This IDE projects (Xcode3 and VS2010) are set up to be built with [maxbuild](https://github.com/olilarkin/maxbuild). If you want to compile it you should first checkout maxbuild and then checkout ol.wsserver into the examples folder or a new folder at the same level.
+The IDE projects (Xcode3 and VS2010) are set up to be built with [maxbuild](https://github.com/olilarkin/maxbuild). If you want to compile it you should first checkout maxbuild and then checkout ol.wsserver into the examples folder or a new folder at the same level.
 
 The following commands should get you set up:
 
