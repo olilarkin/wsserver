@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <OBJECTNAME>ol.wsserver</OBJECTNAME>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetName>$(OBJECTNAME)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)civetweb\include;$(ProjectDir)civetweb\src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>USE_WEBSOCKET;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="OBJECTNAME">
+      <Value>$(OBJECTNAME)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

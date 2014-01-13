@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F3927311882EF3F00F74074 /* maxcpp6.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3927301882EF3F00F74074 /* maxcpp6.h */; };
+		4F83E1211880467B00A9BA95 /* civetweb.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F83E08018803CCB00A9BA95 /* civetweb.h */; };
+		4F83E1231880467B00A9BA95 /* wsserver.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */; };
+		4F83E1251880467B00A9BA95 /* commonsyms.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F4FD6E4187F2577005FB2B9 /* commonsyms.c */; };
+		4F83E1261880467B00A9BA95 /* wsserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F83E0491880387700A9BA95 /* wsserver.cpp */; };
+		4F8417141882348800A3B770 /* JitterAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8417131882348800A3B770 /* JitterAPI.framework */; };
+		4F9C380D18818E7E00A88A88 /* civetweb.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F83E08418803CD500A9BA95 /* civetweb.c */; };
+		4F9C394C1881B6E900A88A88 /* heapbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9C39441881B6E900A88A88 /* heapbuf.h */; };
+		4F9C394D1881B6E900A88A88 /* mutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9C39451881B6E900A88A88 /* mutex.h */; };
+		4F9C394E1881B6E900A88A88 /* wdlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9C39461881B6E900A88A88 /* wdlstring.h */; };
+		4F9C394F1881B6E900A88A88 /* wdltypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9C39471881B6E900A88A88 /* wdltypes.h */; };
+		4F9C3A1F1881BD3B00A88A88 /* ptrlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F9C3A1D1881BD3B00A88A88 /* ptrlist.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22CF10220EE984600054F513 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../../common.xcconfig; sourceTree = SOURCE_ROOT; };
+		22CF11AD0EE9A8840054F513 /* wsserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wsserver.h; sourceTree = "<group>"; };
+		4F3927301882EF3F00F74074 /* maxcpp6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maxcpp6.h; path = ../../maxcpp/maxcpp/maxcpp6.h; sourceTree = SOURCE_ROOT; };
+		4F4FD6E4187F2577005FB2B9 /* commonsyms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = commonsyms.c; path = "../../max-sdk/c74support/max-includes/common/commonsyms.c"; sourceTree = SOURCE_ROOT; };
+		4F83E0491880387700A9BA95 /* wsserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wsserver.cpp; sourceTree = "<group>"; };
+		4F83E08018803CCB00A9BA95 /* civetweb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = civetweb.h; path = civetweb/include/civetweb.h; sourceTree = "<group>"; };
+		4F83E08418803CD500A9BA95 /* civetweb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = civetweb.c; path = civetweb/src/civetweb.c; sourceTree = "<group>"; };
+		4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = wsserver.xcconfig; sourceTree = "<group>"; };
+		4F83E12D1880467B00A9BA95 /* ol.wsserver.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ol.wsserver.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F8417131882348800A3B770 /* JitterAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JitterAPI.framework; path = "../../max-sdk/c74support/jit-includes/JitterAPI.framework"; sourceTree = SOURCE_ROOT; };
+		4F9C39441881B6E900A88A88 /* heapbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = heapbuf.h; path = wdl/heapbuf.h; sourceTree = "<group>"; };
+		4F9C39451881B6E900A88A88 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = wdl/mutex.h; sourceTree = "<group>"; };
+		4F9C39461881B6E900A88A88 /* wdlstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlstring.h; path = wdl/wdlstring.h; sourceTree = "<group>"; };
+		4F9C39471881B6E900A88A88 /* wdltypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdltypes.h; path = wdl/wdltypes.h; sourceTree = "<group>"; };
+		4F9C3A1D1881BD3B00A88A88 /* ptrlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ptrlist.h; path = wdl/ptrlist.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F83E1281880467B00A9BA95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F8417141882348800A3B770 /* JitterAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* iterator */ = {
+			isa = PBXGroup;
+			children = (
+				4F8417121882348800A3B770 /* External Frameworks and Libraries */,
+				4F83E0A818803ECF00A9BA95 /* supporting */,
+				22CF10220EE984600054F513 /* common.xcconfig */,
+				4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */,
+				22CF11AD0EE9A8840054F513 /* wsserver.h */,
+				4F83E0491880387700A9BA95 /* wsserver.cpp */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = iterator;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F83E12D1880467B00A9BA95 /* ol.wsserver.mxo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F83E0A818803ECF00A9BA95 /* supporting */ = {
+			isa = PBXGroup;
+			children = (
+				4F9C393D1881B6C200A88A88 /* wdl */,
+				4F4FD6E4187F2577005FB2B9 /* commonsyms.c */,
+				4F3927301882EF3F00F74074 /* maxcpp6.h */,
+				4F83E08018803CCB00A9BA95 /* civetweb.h */,
+				4F83E08418803CD500A9BA95 /* civetweb.c */,
+			);
+			name = supporting;
+			sourceTree = "<group>";
+		};
+		4F8417121882348800A3B770 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				4F8417131882348800A3B770 /* JitterAPI.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		4F9C393D1881B6C200A88A88 /* wdl */ = {
+			isa = PBXGroup;
+			children = (
+				4F9C39441881B6E900A88A88 /* heapbuf.h */,
+				4F9C39451881B6E900A88A88 /* mutex.h */,
+				4F9C39461881B6E900A88A88 /* wdlstring.h */,
+				4F9C3A1D1881BD3B00A88A88 /* ptrlist.h */,
+				4F9C39471881B6E900A88A88 /* wdltypes.h */,
+			);
+			name = wdl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4F83E11E1880467B00A9BA95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F83E1211880467B00A9BA95 /* civetweb.h in Headers */,
+				4F9C394C1881B6E900A88A88 /* heapbuf.h in Headers */,
+				4F9C394D1881B6E900A88A88 /* mutex.h in Headers */,
+				4F9C394E1881B6E900A88A88 /* wdlstring.h in Headers */,
+				4F9C394F1881B6E900A88A88 /* wdltypes.h in Headers */,
+				4F9C3A1F1881BD3B00A88A88 /* ptrlist.h in Headers */,
+				4F3927311882EF3F00F74074 /* maxcpp6.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4F83E11D1880467B00A9BA95 /* wsserver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F83E12A1880467B00A9BA95 /* Build configuration list for PBXNativeTarget "wsserver" */;
+			buildPhases = (
+				4F83E11E1880467B00A9BA95 /* Headers */,
+				4F83E1221880467B00A9BA95 /* Resources */,
+				4F83E1241880467B00A9BA95 /* Sources */,
+				4F83E1281880467B00A9BA95 /* Frameworks */,
+				4F83E1291880467B00A9BA95 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wsserver;
+			productName = iterator;
+			productReference = 4F83E12D1880467B00A9BA95 /* ol.wsserver.mxo */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "wsserver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* iterator */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F83E11D1880467B00A9BA95 /* wsserver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F83E1221880467B00A9BA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F83E1231880467B00A9BA95 /* wsserver.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		4F83E1291880467B00A9BA95 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F83E1241880467B00A9BA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F83E1251880467B00A9BA95 /* commonsyms.c in Sources */,
+				4F83E1261880467B00A9BA95 /* wsserver.cpp in Sources */,
+				4F9C380D18818E7E00A88A88 /* civetweb.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2FBBEAD008F335010078DB84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = USE_WEBSOCKET;
+			};
+			name = Debug;
+		};
+		2FBBEAD108F335010078DB84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = USE_WEBSOCKET;
+			};
+			name = Release;
+		};
+		4F83E12B1880467B00A9BA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../max-sdk/c74support/jit-includes\"",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
+			};
+			name = Debug;
+		};
+		4F83E12C1880467B00A9BA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../max-sdk/c74support/jit-includes\"",
+				);
+				OTHER_LDFLAGS = "$(C74_SYM_LINKER_FLAGS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "wsserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FBBEAD008F335010078DB84 /* Debug */,
+				2FBBEAD108F335010078DB84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F83E12A1880467B00A9BA95 /* Build configuration list for PBXNativeTarget "wsserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F83E12B1880467B00A9BA95 /* Debug */,
+				4F83E12C1880467B00A9BA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

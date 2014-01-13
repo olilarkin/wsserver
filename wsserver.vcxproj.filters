@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="supporting">
+      <UniqueIdentifier>{d16e67df-a6ce-4d5b-8951-eab150a6783c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\max-sdk\c74support\max-includes\common\dllmain_win.c">
+      <Filter>supporting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\max-sdk\c74support\max-includes\common\commonsyms.c">
+      <Filter>supporting</Filter>
+    </ClCompile>
+    <ClCompile Include="wsserver.cpp" />
+    <ClCompile Include="civetweb\src\civetweb.c">
+      <Filter>supporting</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\maxcpp\maxcpp\maxcpp6.h">
+      <Filter>supporting</Filter>
+    </ClInclude>
+    <ClInclude Include="civetweb\include\civetweb.h">
+      <Filter>supporting</Filter>
+    </ClInclude>
+    <ClInclude Include="wsserver.h" />
+  </ItemGroup>
+</Project>

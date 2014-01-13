@@ -1,0 +1,4 @@
+LIBRARY wsserver.mxe
+
+EXPORTS
+	main
