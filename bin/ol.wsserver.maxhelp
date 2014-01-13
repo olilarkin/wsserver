@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 106.0, 123.0, 850.0, 723.0 ],
+		"rect" : [ 1017.0, 294.0, 850.0, 723.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -701,8 +701,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 451.5, 352.0, 112.0, 32.0 ],
-					"text" : ";\rto_server tx 0 hello"
+					"patching_rect" : [ 451.5, 351.0, 115.0, 32.0 ],
+					"text" : ";\rto_server tx 0 world"
 				}
 
 			}
