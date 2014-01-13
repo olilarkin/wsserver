@@ -12,7 +12,11 @@ Oli Larkin 2014
 
 Example uses interface.js by [Charlie Roberts](http://www.charlie-roberts.com/interface/)
 
-###Building
+###Binaries/Download
+
+32/64bit binaries can be found on the [releases page](https://github.com/olilarkin/wsserver/releases)
+
+###Building from source
 
 This IDE projects (Xcode3 and VS2010) are set up to be built with [maxbuild](https://github.com/olilarkin/maxbuild). If you want to compile it you should first checkout maxbuild and then checkout ol.wsserver into the examples folder or a new folder at the same level.
 
