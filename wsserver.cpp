@@ -107,15 +107,22 @@ void wsserver::outputData()
     if(ws_conn->newdatatoserver && ws_conn->toserver.GetLength())
     {
       atom_setlong(&argv[0], i); 
-      atom_setsym(&argv[1], gensym(ws_conn->toserver.Get()));
-      
-      //TODO: this is probably slow
-      if (strcmp(ws_conn->toserver.Get(), "connected") == 0)
-        outlet_anything(m_outlets[0], gensym("connected"), 1, argv);
-      else if (strcmp(ws_conn->toserver.Get(), "disconnected") == 0)
-        outlet_anything(m_outlets[0], gensym("disconnected"), 1, argv);
-      else
+
+      if (strncmp(ws_conn->toserver.Get(), "cx", 2) == 0) // connected
+      {
+        atom_setlong(&argv[1], 1);
+        outlet_anything(m_outlets[0], gensym("cx"), 2, argv);
+      }
+      else if (strncmp(ws_conn->toserver.Get(), "dx", 2) == 0) // disconnected
+      {
+        atom_setlong(&argv[1], 0);
+        outlet_anything(m_outlets[0], gensym("cx"), 2, argv);
+      }
+      else // message
+      {
+        atom_setsym(&argv[1], gensym(ws_conn->toserver.Get()));
         outlet_anything(m_outlets[0], gensym("rx"), 2, argv);
+      }
           
       ws_conn->newdatatoserver = false;
     }
@@ -343,7 +350,7 @@ void *ws_server_thread(void *parm)
   ws_conn->newdatafromserver = false;
   ws_conn->newdatatoserver = true;
   ws_conn->fromserver.Set("");
-  ws_conn->toserver.SetFormatted(MAX_STRING, "disconnected");
+  ws_conn->toserver.SetFormatted(MAX_STRING, "dx");
   return NULL;
 }
 
@@ -371,7 +378,7 @@ int websocket_connect_handler(const struct mg_connection *conn)
       ws_conn->closing = 0;
       ws_conn->update = 0;
       ws_conn->index = i;
-      ws_conn->toserver.SetFormatted(MAX_STRING, "connected");
+      ws_conn->toserver.SetFormatted(MAX_STRING, "cx");
       ws_conn->newdatatoserver = true;
       break;
     }
