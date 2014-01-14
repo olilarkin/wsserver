@@ -1,0 +1,43 @@
+/*
+	Max Web Control Stylesheet
+	Oli Larkin 2011
+	
+	Music Research Centre, University of York
+	http://www.york.ac.uk/music/mrc
+	http://www.olilarkin.c.uk
+	LGPL
+	
+*/
+
+* {
+-webkit-user-select: none;
+-moz-user-select: none;
+}
+
+#container {
+	width: 860px;
+	height: 300px;
+	margin: 10px;
+	padding: 10px;
+}
+
+#slider {
+	width: 200px;
+	height: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.meter {
+	width: 200px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#toolbar {
+	padding: 18px 10px;
+}
+
+//body {
+//	background-color: grey;
+//}
