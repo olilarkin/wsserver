@@ -62,8 +62,8 @@ public:
     int index;
     bool newdatafromserver;
     bool newdatatoserver;
-    WDL_String fromserver;
-    WDL_String toserver;
+    WDL_FastString fromserver;
+    WDL_FastString toserver;
     WDL_Mutex mutex;
     
     ws_connection()
@@ -78,8 +78,8 @@ public:
   long mNumConnectionsToAllocate;
 
 private:
-  WDL_String mServerName;
-  WDL_String mPortNumber;
+  WDL_FastString mServerName;
+  WDL_FastString mPortNumber;
   WDL_PtrList<ws_connection> mConnections;
   mg_context* mCtx;
   void *mClock;
