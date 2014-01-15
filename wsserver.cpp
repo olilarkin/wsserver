@@ -354,7 +354,6 @@ void *ws_server_thread(void *parm)
   return NULL;
 }
 
-// wsserver::websocket_connect_handler()
 // On new client connection, find next available server connection and store
 // new connection information. If no more server connections are available
 // tell civetweb to not accept the client request.
@@ -393,7 +392,6 @@ int websocket_connect_handler(const struct mg_connection *conn)
   return 0;
 }
 
-// wsserver::websocket_ready_handler()
 // Once websocket negotiation is complete, start a server for the connection
 void websocket_ready_handler(struct mg_connection *conn)
 { 
@@ -412,7 +410,6 @@ void websocket_ready_handler(struct mg_connection *conn)
   }
 }
 
-// wsserver::websocket_close_handler()
 // When websocket is closed, tell the associated server to shut down
 void websocket_close_handler(struct mg_connection *conn)
 {
