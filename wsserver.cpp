@@ -343,14 +343,14 @@ void *ws_server_thread(void *parm)
   WDL_MutexLock(&ws_conn->mutex);
 
   // reset connection information to allow reuse by new client
-  ws_conn->conn = NULL;
   ws_conn->update = 0;
-  ws_conn->closing = 2;
   ws_conn->index = -1;
   ws_conn->newdatafromserver = false;
   ws_conn->newdatatoserver = true;
   ws_conn->fromserver.Set("");
-  ws_conn->toserver.SetFormatted(MAX_STRING, "dx");
+  if(ws_conn->toserver.Get()) ws_conn->toserver.SetFormatted(MAX_STRING, "dx");
+  ws_conn->conn = NULL;
+  ws_conn->closing = 2;
   return NULL;
 }
 
