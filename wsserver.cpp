@@ -147,41 +147,39 @@ void wsserver::start(long inlet, t_symbol *s, long ac, t_atom *av)
     if (atom_gettype(av) == A_SYM)
     {
       // TODO: check that webroot path is valid
-      
-      gServerInstances++;
-
-      const char *options[] = {
-        "listening_ports", mPortNumber.Get(),
-        "document_root", atom_getsym(av)->s_name,
-        NULL
-      };
-      
-      mServerName.SetFormatted(128, "ol.wsserver v. %s", VERSION);
-      
-      memset(&callbacks, 0, sizeof(callbacks));
-      callbacks.websocket_connect = websocket_connect_handler;
-      callbacks.websocket_ready = websocket_ready_handler;
-      callbacks.websocket_data = websocket_data_handler;
-      callbacks.connection_close = websocket_close_handler;
-      
-      for (int i=0; i<mNumConnectionsToAllocate; i++) {
-        mConnections.Add(new ws_connection());
-      }
-      
-      mCtx = mg_start(&callbacks, this /* so that we can get a pointer to this in the static callbacks */, options);
-      
-      if (mCtx) 
+      if (mCtx == NULL) 
       {
-        post("%s started on port(s) %s with web root [%s]\n", 
-               mServerName.Get(), 
-               mg_get_option(mCtx, "listening_ports"), 
-               mg_get_option(mCtx, "document_root"));
-        post("maximium %i clients\n", mNumConnectionsToAllocate);
+        const char *options[] = {
+          "listening_ports", mPortNumber.Get(),
+          "document_root", atom_getsym(av)->s_name,
+          NULL
+        };
+      
+        mServerName.SetFormatted(128, "ol.wsserver v. %s", VERSION);
+      
+        memset(&mCallbacks, 0, sizeof(mCallbacks));
+        mCallbacks.websocket_connect = websocket_connect_handler;
+        mCallbacks.websocket_ready = websocket_ready_handler;
+        mCallbacks.websocket_data = websocket_data_handler;
+        mCallbacks.connection_close = websocket_close_handler;
+      
+        for (int i=0; i<mNumConnectionsToAllocate; i++)
+          mConnections.Add(new ws_connection());
+      
+        mCtx = mg_start(&mCallbacks, this /* so that we can get a pointer to this in the static mCallbacks */, options);
+      
+        if(mCtx)
+        {
+          post("%s started on port(s) %s with web root [%s]\n", mServerName.Get(), mg_get_option(mCtx, "listening_ports"), mg_get_option(mCtx, "document_root"));
+          post("maximium %i clients\n", mNumConnectionsToAllocate);
         
-        clock_fdelay(mClock, 0.);
+          clock_fdelay(mClock, 0.);
+        }
+        else
+          error("couldn't start server: perhaps port is allready being used?");
       }
       else
-        error("couldn't start server: perhaps port is allready being used?");
+        error("server already started");
     }
     else
       error("missing argument for message start");

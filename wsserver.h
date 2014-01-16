@@ -48,9 +48,6 @@
 #define MIN_UPDATE_RATE 10
 #define DEFAULT_DEBUG 0
 
-static int gServerInstances = 0;
-struct mg_callbacks callbacks;
-
 class wsserver : public MaxCpp6<wsserver> 
 {
 public:
@@ -82,6 +79,7 @@ private:
   WDL_FastString mPortNumber;
   WDL_PtrList<ws_connection> mConnections;
   mg_context* mCtx;
+  mg_callbacks mCallbacks;
   void *mClock;
   bool mDebug;
 
