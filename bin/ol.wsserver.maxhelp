@@ -29,13 +29,56 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-45",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 578.875, 604.814697, 234.0, 20.0 ],
+					"presentation_rect" : [ 587.5, 569.0, 0.0, 0.0 ],
+					"text" : "launch another browser..."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 30.0,
+					"frgb" : 0.0,
+					"id" : "obj-28",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.5, 580.0, 33.0, 40.0 ],
+					"presentation_rect" : [ 537.5, 544.185303, 0.0, 0.0 ],
+					"text" : "3"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"border" : 1,
+					"id" : "obj-41",
+					"maxclass" : "panel",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 522.875, 580.0, 42.25, 40.629372 ],
+					"presentation_rect" : [ 529.875, 544.185303, 0.0, 0.0 ],
+					"shape" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-43",
 					"maxclass" : "button",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 114.0, 660.0, 20.0, 20.0 ],
-					"presentation_rect" : [ 91.0, 645.0, 0.0, 0.0 ]
+					"patching_rect" : [ 114.0, 660.0, 20.0, 20.0 ]
 				}
 
 			}
