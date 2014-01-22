@@ -211,9 +211,13 @@ void wsserver::tx(long inlet, t_symbol *s, long ac, t_atom *av)
     else if (ac == 2 && atom_gettype(av) == A_LONG)
     {      
       ws_connection* ws_conn = getConnection(atom_getlong(av));
-      WDL_MutexLock(&ws_conn->mutex);
-      ws_conn->fromserver.SetFormatted(MAX_STRING, "rx %s", atom_getsym(av+1)->s_name);
-      ws_conn->newdatafromserver = true;
+      if (ws_conn) {
+        WDL_MutexLock(&ws_conn->mutex);
+        ws_conn->fromserver.SetFormatted(MAX_STRING, "rx %s", atom_getsym(av+1)->s_name);
+        ws_conn->newdatafromserver = true;
+      }
+      else
+        error("invalid client for message tx");
     }
     else
       error("missing argument for message tx");
