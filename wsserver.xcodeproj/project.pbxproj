@@ -149,6 +149,8 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "wsserver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -204,6 +206,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = USE_WEBSOCKET;
+				SYMROOT = "build-mac";
 			};
 			name = Debug;
 		};
@@ -211,6 +214,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = USE_WEBSOCKET;
+				SYMROOT = "build-mac";
 			};
 			name = Release;
 		};

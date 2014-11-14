@@ -20,6 +20,6 @@
 *.xcschememanagement.plist
 build-*
 ipch/*
-
 Icon?
 .DS_Stor*
+wsserver.xcodeproj/xcuserdata
