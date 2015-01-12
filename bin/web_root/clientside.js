@@ -8,7 +8,7 @@ var xypad;
 function init() {  
    panel = new Interface.Panel({  
     background:"#fff", 
-    stroke:"000",
+    stroke:"#000",
     container:$("#panel"),
     useRelativeSizesAndPositions : true
   }); 
@@ -18,7 +18,7 @@ function init() {
     bounds:[0.,0.,0.2,0.05 ],  
     label:'WebSocket Connect',    
     size:14,
-    stroke:"000",
+    stroke:"#000",
     style:'normal',
     onvaluechange: function() {
       this.clear();
@@ -38,7 +38,7 @@ function init() {
   
   xypad = new Interface.XY({
     background:"#fff",
-    stroke:"000",
+    stroke:"#000",
     childWidth: 40,
     numChildren: 1,
     bounds:[0,0.06,0.9,0.9],
