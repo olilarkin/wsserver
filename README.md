@@ -18,7 +18,7 @@ Example uses interface.js by [Charlie Roberts](http://www.charlie-roberts.com/in
 
 ###Building from source
 
-The IDE projects (Xcode6 and VS2013) are set up to be built with [maxbuild](https://github.com/olilarkin/maxbuild). If you want to compile it you should first checkout maxbuild and then checkout ol.wsserver into the examples folder or a new folder at the same level.
+The IDE projects (Xcode6 and VS2010) are set up to be built with [maxbuild](https://github.com/olilarkin/maxbuild). If you want to compile it you should first checkout maxbuild and then checkout ol.wsserver into the examples folder or a new folder at the same level.
 
 The following commands should get you set up:
 
