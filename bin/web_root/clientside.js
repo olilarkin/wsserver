@@ -32,7 +32,7 @@ function init() {
     hAlign:'left',
     vAlign:'middle',
     size:12,
-    stroke:"000",
+    stroke:"#000",
     style:'normal'
   });
   
@@ -43,7 +43,7 @@ function init() {
     numChildren: 1,
     bounds:[0,0.06,0.9,0.9],
     usePhysics : false,
-    friction : 0.9,
+    friction : 1,
     activeTouch : true,
     maxVelocity : 100,
     detectCollisions : true,
