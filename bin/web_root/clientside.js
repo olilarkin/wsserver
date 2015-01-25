@@ -1,5 +1,5 @@
 var gConnection; // websocket gConnection
-
+var gConnectionID = -1;
 var panel;
 var connectButton;
 var label;
@@ -94,7 +94,12 @@ function ws_connect() {
           {
             json = ev.data.substr(3);
             
-            if(json.substr(0, 5) == "move ")
+            if(json.substr(0, 7) == "set_id ")
+            {
+            	gConnectionID = parseInt(json.substr(7));
+							writeToScreen('Connection ID ' + gConnectionID);
+            }
+            else if(json.substr(0, 5) == "move ")
             {
               values = JSON.parse(json.substr(5));
               xypad.children[0].x = values.x * xypad._width();
