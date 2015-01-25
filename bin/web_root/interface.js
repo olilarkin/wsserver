@@ -2722,12 +2722,12 @@ Interface.XY = function() {
 
 Interface.XY.prototype = Interface.Widget;
 Interface.XY.colors = [
-  'rgba(255,0,0,.35)',
-  'rgba(0,255,0,.35)',
-  'rgba(0,0,255,.35)',
-  'rgba(0,255,255,.35)',
-  'rgba(255,0,255,.35)',
-  'rgba(255,255,0,.35)',
+  'rgba(255,0,0,1)',
+  'rgba(0,255,0,1)',
+  'rgba(0,0,255,1)',
+  'rgba(0,255,255,1)',
+  'rgba(255,0,255,1)',
+  'rgba(255,255,0,1)',
 ];
 /**#Interface.Menu - Widget
 A multi-option dropdown menu.
