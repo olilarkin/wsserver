@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4F3927311882EF3F00F74074 /* maxcpp6.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3927301882EF3F00F74074 /* maxcpp6.h */; };
 		4F83E1211880467B00A9BA95 /* civetweb.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F83E08018803CCB00A9BA95 /* civetweb.h */; };
-		4F83E1231880467B00A9BA95 /* wsserver.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */; };
 		4F83E1251880467B00A9BA95 /* commonsyms.c in Sources */ = {isa = PBXBuildFile; fileRef = 4F4FD6E4187F2577005FB2B9 /* commonsyms.c */; };
 		4F83E1261880467B00A9BA95 /* wsserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F83E0491880387700A9BA95 /* wsserver.cpp */; };
 		4F8417141882348800A3B770 /* JitterAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8417131882348800A3B770 /* JitterAPI.framework */; };
@@ -25,13 +24,13 @@
 		22CF10220EE984600054F513 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../../common.xcconfig; sourceTree = SOURCE_ROOT; };
 		22CF11AD0EE9A8840054F513 /* wsserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wsserver.h; sourceTree = "<group>"; };
 		4F3927301882EF3F00F74074 /* maxcpp6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = maxcpp6.h; path = ../../maxcpp/maxcpp/maxcpp6.h; sourceTree = SOURCE_ROOT; };
-		4F4FD6E4187F2577005FB2B9 /* commonsyms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = commonsyms.c; path = "../../max-sdk/c74support/max-includes/common/commonsyms.c"; sourceTree = SOURCE_ROOT; };
+		4F4FD6E4187F2577005FB2B9 /* commonsyms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = commonsyms.c; path = "../../max-sdk/source/c74support/max-includes/common/commonsyms.c"; sourceTree = SOURCE_ROOT; };
 		4F83E0491880387700A9BA95 /* wsserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wsserver.cpp; sourceTree = "<group>"; };
 		4F83E08018803CCB00A9BA95 /* civetweb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = civetweb.h; path = civetweb/include/civetweb.h; sourceTree = "<group>"; };
 		4F83E08418803CD500A9BA95 /* civetweb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = civetweb.c; path = civetweb/src/civetweb.c; sourceTree = "<group>"; };
 		4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = wsserver.xcconfig; sourceTree = "<group>"; };
 		4F83E12D1880467B00A9BA95 /* ol.wsserver.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ol.wsserver.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F8417131882348800A3B770 /* JitterAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JitterAPI.framework; path = "../../max-sdk/c74support/jit-includes/JitterAPI.framework"; sourceTree = SOURCE_ROOT; };
+		4F8417131882348800A3B770 /* JitterAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JitterAPI.framework; path = "../../max-sdk/source/c74support/jit-includes/JitterAPI.framework"; sourceTree = SOURCE_ROOT; };
 		4F9C39441881B6E900A88A88 /* heapbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = heapbuf.h; path = wdl/heapbuf.h; sourceTree = "<group>"; };
 		4F9C39451881B6E900A88A88 /* mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mutex.h; path = wdl/mutex.h; sourceTree = "<group>"; };
 		4F9C39461881B6E900A88A88 /* wdlstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wdlstring.h; path = wdl/wdlstring.h; sourceTree = "<group>"; };
@@ -150,6 +149,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = 2FBBEACF08F335010078DB84 /* Build configuration list for PBXProject "wsserver" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -172,7 +172,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F83E1231880467B00A9BA95 /* wsserver.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +204,9 @@
 		2FBBEAD008F335010078DB84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = USE_WEBSOCKET;
+				ONLY_ACTIVE_ARCH = YES;
 				SYMROOT = "build-mac";
 			};
 			name = Debug;
@@ -222,6 +223,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -236,6 +238,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F83E0B5188040DE00A9BA95 /* wsserver.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
