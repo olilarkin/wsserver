@@ -119,5 +119,5 @@ extern "C" int C74_EXPORT main(void)
 static void *ws_server_thread(void *parm);
 static int websocket_connect_handler(const struct mg_connection *conn);
 static void websocket_ready_handler(struct mg_connection *conn);
-static void websocket_close_handler(struct mg_connection *conn);
+static void websocket_close_handler(const struct mg_connection *conn);
 static int websocket_data_handler(struct mg_connection *conn, int flags, char *data, size_t data_len);

@@ -413,7 +413,7 @@ void websocket_ready_handler(struct mg_connection *conn)
 }
 
 // When websocket is closed, tell the associated server to shut down
-void websocket_close_handler(struct mg_connection *conn)
+void websocket_close_handler(const struct mg_connection *conn)
 {
   wsserver* object = static_cast<wsserver*>(mg_get_request_info(conn)->user_data);
 
